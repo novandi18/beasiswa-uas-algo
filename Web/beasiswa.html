@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beasiswa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="box">
+        <div class="container">
+            <h2>Beasiswa</h2>
+            
+            <form action="#" id="formData">
+                <input type="text" class="input" placeholder="Nama lengkap" id="nama" required>
+                <input type="number" class="input" placeholder="NIM" id="nim" required>
+                <input type="text" class="input" placeholder="IPK" id="ipk" required>
+                <div class="inputGaji">
+                    <div class="txtGaji rounded-left">Rp.</div>
+                    <input type="text" placeholder="Gaji Orang Tua" id="gaji" required>
+                </div>
+
+                <button type="submit" id="submit">Masukkan</button>
+            </form>
+
+            <a href="#" id="viewAllData">Lihat semua data karyawan yang telah ditambahkan.</a>
+        </div>
+        
+        <div class="container" id="dataUI">
+            <div class="title">
+                <div class="titles">
+                    <h2>Seluruh Data Karyawan</h2>
+                    <a href="#" onclick="deleteData();" class="btnDel">Hapus semua data</a>
+                </div>
+                <div class="titles-btn">
+                    <span id="closeData">&#10005</span>
+                </div>
+            </div>
+            
+            <div id="dataAll"></div>
+        </div>
+    </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Data Karyawan Ditambahkan!</h3>
+            
+            <div class="detail">
+                <div class="list">
+                    <table>
+                        <tr>
+                            <th>Nama</th>
+                            <td><b>:</b> <span id="namaHasil"></span></td>
+                        </tr>
+                        <tr>
+                            <th>NIM</th>
+                            <td><b>:</b> <span id="nimHasil"></span></td>
+                        </tr>
+                        <tr>
+                            <th>IPK</th>
+                            <td><b>:</b> <span id="ipkHasil"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Gaji</th>
+                            <td><b>:</b> <span id="gajiHasil"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td><b>:</b> <span id="statusHasil"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

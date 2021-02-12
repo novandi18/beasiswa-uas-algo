@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(46, 88, 226);
+}
+
+.box {
+    margin: 50px auto;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 1px 1px 20px 5px rgba(0,0,0,.1);
+    border-radius: 10px;
+    display: flex;
+    padding: 30px 0;
+    height: 450px;
+}
+
+.box .container:first-child {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+}
+
+.box .container:nth-child(2) {
+    margin: 0 25px;
+    border-left: 1px solid #ddd;
+    width: 400px;
+    padding-right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 15px;
+}
+
+.title {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    background-color: white;
+    margin-bottom: -10px;
+    padding-bottom: 15px;
+    /* width: 350px; */
+}
+
+.title.shadow {
+    border-bottom: 1px solid black;
+    box-shadow: 0px 10px 5px -5px rgba(0,0,0,.1);
+}
+
+.title .titles-btn {
+    margin-top: 5px;
+}
+
+.title span {
+    margin-left: 25px;
+}
+
+#dataAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dataAll span {
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+#dataAll table {
+    /* margin-top: 15px; */
+    margin: 15px 0;
+}
+
+#dataAll table tr th, td {
+    text-align: center;
+}
+
+#dataUI a {
+    margin-top: 60px;
+}
+
+.box .container form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(41, 41, 41);
+}
+
+input {
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+button {
+    margin: auto;
+    padding: 10px 20px;
+    margin-top: 25px;
+    background-color: rgb(31, 143, 255);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all ease .1s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: rgb(64, 159, 255);
+    transform: scale(1.03);
+    transition: all ease .1s;
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,.1);
+}
+
+button:active {
+    background-color: rgb(27, 120, 212);
+    transition: all ease .1s;
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    transition: all ease 0.1s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    /* font-weight: bold; */
+    margin-top: -6px;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Detail in Modal */
+.detail {
+    margin-top: 30px;
+    padding: 0;
+}
+
+table th, td {
+    width: 100px;
+    text-align: left;
+}
+
+/* link */
+a {
+    font-size: 12px;
+    /* text-decoration: none; */
+    color: navy;
+}
+
+.inputUsia {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: all ease .2s;
+}
+
+.inputUsia:hover {
+    box-shadow: 0px 2px 0px 0px rgb(41, 41, 41);
+    transform: translateY(-2px);
+    transition: all ease .2s;
+}
+
+.inputUsia input {
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+
+.inputUsia input:focus {
+    border: none;
+}
+
+.inputUsia input:active {
+    border: none;
+}
+
+.inputUsia .txtUsia {
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    padding: 0 10px;
+    background-color: #eee;
+}
+
+.rounded-left {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: 1px solid rgb(41, 41, 41);
+}
+
+.rounded-right {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 1px solid rgb(41, 41, 41);
+}
+
+.input {
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+}
+
+.input:hover {
+    box-shadow: 0px 2px 0px 0px rgb(41, 41, 41);
+    transform: translateY(-2px);
+    transition: all ease .2s;
+}
+
+.alert {
+    font-size: 11px;
+    font-weight: bold;
+    color: crimson;
+}
+
+.is-invalid {
+    border-color: crimson;
+}
+
+.inputGaji {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: all ease .2s;
+}
+
+.inputGaji:hover {
+    box-shadow: 0px 2px 0px 0px rgb(41, 41, 41);
+    transform: translateY(-2px);
+    transition: all ease .2s;
+}
+
+.inputGaji input {
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+
+.inputGaji input:focus {
+    border: none;
+}
+.inputGaji input:active {
+    border: none;
+}
+
+.inputGaji .txtGaji {
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    padding: 0 10px;
+    background-color: #eee;
+}
+
+/* Data list UI */
+.tableUI {
+    width: 100%;
+}
+
+.tableUI tr th, td {
+    padding: 10px;
+}
+
+.btnDel {
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: rgb(238, 75, 57);
+    color: white;
+    margin-bottom: 10px;
+    width: 116px;
+}
+
+.btnDel:hover {
+    background-color: rgb(211, 52, 35);
+}
+
+.btnDel:active {
+    background-color: rgb(180, 31, 15);
+}
+
+#closeData {
+    cursor: pointer;
+    height: 0;
+    margin-top: 5px;
+}
+
+#viewAllData {
+    bottom: 0;
+    position: absolute;
+    padding-right: 25px;
+}
+
+/* Input Select Custom */
+.dropdown-el {
+    width: auto;
+    position: relative;
+    display: inline-block;
+    min-height: 2.8em;
+    max-height: 2.8em;
+    overflow: hidden;
+    top: 0.5em;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #444;
+    outline: none;
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.dropdown-el:hover {
+    box-shadow: 0px 2px 0px 0px rgb(41, 41, 41);
+    transform: translateY(-2px);
+    transition: all ease .2s;
+}
+
+.dropdown-el input:focus + label {
+  background: rgb(41, 41, 41);;
+}
+
+.dropdown-el input {
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  opacity: 0.01;
+}
+
+.dropdown-el label {
+  border-top: 0.06em solid rgb(41, 41, 41);;
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 3em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s color ease-in-out;
+}
+
+.dropdown-el label:nth-child(2) {
+  margin-top: 2.8em;
+  border-top: 0.06em solid rgb(41, 41, 41);;
+}
+
+.dropdown-el input:checked + label {
+  display: block;
+  border-top: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.dropdown-el input:checked + label:nth-child(2) {
+  margin-top: 0;
+  position: relative;
+}
+
+.dropdown-el::after {
+  content: "";
+  position: absolute;
+  right: 0.8em;
+  top: 1.3em;
+  border: 0.3em solid #000;
+  border-color: #000 transparent transparent transparent;
+  transition: 0.4s all ease-in-out;
+}
+
+.dropdown-el.expanded {
+  border: 0.06em solid rgb(41, 41, 41);;
+  background: #fff;
+  border-radius: 0.25em;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
+  max-height: 15em;
+}
+
+.dropdown-el.expanded label {
+  border-top: 0.06em solid rgb(41, 41, 41);;
+}
+
+.dropdown-el.expanded label:hover {
+  color: rgb(41, 41, 41);
+  /* font-weight: bold; */
+  background: #eee;
+}
+
+.dropdown-el.expanded input:checked + label {
+  color: rgb(41, 41, 41);;
+  /* font-weight: bold; */
+}
+
+.dropdown-el.expanded::after {
+  transform: rotate(-180deg);
+  top: 1em;
+}
